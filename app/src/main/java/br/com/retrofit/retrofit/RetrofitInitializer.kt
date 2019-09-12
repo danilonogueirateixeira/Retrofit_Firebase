@@ -1,4 +1,4 @@
-package br.com.retrofit.network
+package br.com.retrofit.retrofit
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -10,6 +10,6 @@ class RetrofitInitializer {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-    fun filmeService () = retrofit.create(FilmeService::class.java)
+    fun filmeService (): FilmeService = retrofit.create(FilmeService::class.java)
 
 }
